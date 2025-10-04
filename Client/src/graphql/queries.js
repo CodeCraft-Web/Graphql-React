@@ -10,3 +10,14 @@ export const GET_USERS = gql`
     }
   }
 `;
+
+export const GET_USER = gql`
+  query GetUserById($getUserById: ID!) {
+    getUserById(id: $getUserById) {
+      id
+      name
+      age
+      isMarried
+    }
+  }
+`
