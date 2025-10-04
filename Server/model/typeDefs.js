@@ -1,6 +1,13 @@
 import { gql } from "apollo-server";
 
 export const typeDefs = gql`
+  type User {
+    id: ID!
+    name: String!
+    age: Int!
+    isMarried: Boolean!
+  }
+
   type Query {
     getUsers: [User!]!
     getUserById(id: ID!): User!
@@ -16,10 +23,5 @@ export const typeDefs = gql`
     createUser(input: createUserInput): User
   }
 
-  type User {
-    id: ID!
-    name: String!
-    age: Int!
-    isMarried: Boolean!
-  }
+
 `
