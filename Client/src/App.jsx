@@ -1,12 +1,12 @@
 import "./App.css";
+import AddUser from "./component/AddUser";
 import UserList from "./component/UserList";
 
 
 function App() {
   return (
     <>
-      {/* <UserList /> */}
-      <h1>hi</h1>
+      <AddUser/>
       <UserList/>
     </>
   );

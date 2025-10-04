@@ -1,8 +1,8 @@
 import { useQuery } from '@apollo/client';
-import { GET_USER } from "../graphql/queries";
+import { GET_USERS } from "../graphql/queries";
 
 const UserList = () => {
-  const { loading, error, data } = useQuery(GET_USER);
+  const { loading, error, data } = useQuery(GET_USERS);
 
   if (loading) return <p>Loading users...</p>;
   if (error) return <p style={{ color: "red" }}>Error: {error.message}</p>;
